@@ -1,0 +1,84 @@
+.registration-block{
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center; /* Вертикальное центрирование */
+}
+
+
+.registration-form {
+    width: 700px; /* Ограничиваем ширину блока */
+    padding: 20px; /* Внутренние отступы */
+    border: 2px solid black; /* Граница блока */
+    border-radius: 8px; /* Скругленные углы */
+    background-color: #dfdfdf; /* Светло-серый фон */
+    font-family: Arial, sans-serif; /* Простой шрифт */
+    text-align: left; /* Выравнивание текста */
+}
+
+/* Стили для формы */
+form p{
+   font-family: 'Times New Roman', Times, serif;
+   font-size: 24px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column; /* Элементы располагаются вертикально */
+    gap: 15px; /* Отступы между элементами */
+}
+
+/* Стили для меток */
+form label {
+    font-size: 24px; /* Размер шрифта меток */
+    color: #000000; /* Серый цвет текста *//* Жирное начертание */
+}
+
+/* Стили для полей ввода и текстовой области */
+form input[type="text"],
+form input[type="email"],
+form input[type='password'] {
+    height: 20px;
+    width: 90%; /* Поля занимают всю ширину */
+    padding: 10px; /* Внутренние отступы */
+    border: 1px solid #000000; /* Светло-серая граница */
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 24px; /* Размер шрифта */
+    font-family: 'Times New Roman', Times, serif;
+    transition: border-color 0.3s; /* Плавный переход для изменения границы */
+}
+
+/* Стили при фокусе на поле ввода */
+form input:focus,
+form textarea:focus {
+    border-color: #007bff; /* Синяя граница */
+    outline: none; /* Убираем стандартный обвод */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Лёгкая тень */
+}
+
+/* Стили для кнопки */
+form button {
+    padding: 10px 15px; /* Внутренние отступы */
+    background-color: #f7f7f7; /* Синий фон */
+    color: rgb(0, 0, 0); /* Белый текст */
+    border: 2px solid black; /* Убираем границу */
+    width: 200px;
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 16px; /* Размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    cursor: pointer; /* Курсор в виде руки */
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+
+/* Стили при наведении на кнопку */
+form button:hover {
+    transition: 0.9s;
+    background-color: #0056b3; /* Более тёмный синий */
+}
+
+/* Стили для текстовой области */
+form textarea {
+    resize: vertical; /* Разрешить изменение размера только по вертикали */
+    min-height: 100px; /* Минимальная высота */
+}

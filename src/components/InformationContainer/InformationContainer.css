@@ -1,0 +1,30 @@
+.information-block {
+  background-color: whitesmoke;
+  margin-top: 15%;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  padding: 10px 0;
+}
+
+.information-li {
+  display: block;
+  padding: 0;          
+  text-align: center; /* выровнять элементы навигации по центру */
+}
+
+.information-item {
+  display: inline-block;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 28px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 20px; /* добавлено для создания отступов между элементами */
+}
+
+.copy-right-bebezians {
+  margin-top: 10px;
+  font-family: 'Times New Roman';
+  text-align: center;
+  font-size: 18px;
+}

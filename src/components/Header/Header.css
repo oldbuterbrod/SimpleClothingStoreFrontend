@@ -1,0 +1,44 @@
+
+.header-fixed-block {
+  display: flex;            /* Включаем Flexbox */
+  justify-content: center;  /* Выравнивание по горизонтали */
+  align-items: center;      /* Выравнивание по вертикали */
+  position: fixed;          /* Фиксированное позиционирование */
+  top: 5%;                 /* Сдвиг на 50% по вертикали */
+  left: 50%;                /* Сдвиг на 50% по горизонтали */
+  transform: translate(-50%, -50%); /* Корректируем позицию для точного центрирования */
+  font-size: 28px;
+  font-family: "Times New Roman", Times, serif;
+  text-decoration-color: rgba(255, 255, 255, 1.00);
+  z-index: 1000;
+}
+
+header {
+  text-align: center;
+}
+
+  
+  .header nav a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo-button {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-right: 11px;
+    cursor: pointer;
+    padding: 12px 24px;  /* увеличиваем внутренние отступы */
+    font-size: 18px;      /* увеличиваем шрифт на кнопке */
+  }
+  
+
+  .logo-button:hover{
+    background-color: darkblue;
+    transition: 0.5s;
+  }
+
+  nav {
+    text-align: center;
+  }

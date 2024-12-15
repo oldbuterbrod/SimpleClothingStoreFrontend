@@ -1,0 +1,23 @@
+.store-description {
+    text-align: left;
+    width: auto;
+    background-color: whitesmoke;
+  }
+
+  .store-description h1 {
+    color: black;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif,sans-serif;
+    text-align: center;
+  }
+
+  .store-description-text {
+    text-indent: 80px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 28px;
+  }
+
+  .store-description-header{
+    text-align: center;
+  }

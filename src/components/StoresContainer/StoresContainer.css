@@ -1,0 +1,12 @@
+.store-list{
+    list-style-type: none; 
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(172, 172, 172);
+}
+
+.punkts-list{
+    font-size: 36px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(172, 172, 172);
+}
