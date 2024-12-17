@@ -1,43 +1,50 @@
-.container {
+/* Основной контейнер для отображения категорий */
+.category-container {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .scroll-button {
-    background-color: black;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    color: white;
-  }
+/* Кнопки прокрутки */
+.scroll-button {
+  background-color: black;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: white;
+}
 
-  .category-list {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px;
-    gap: 10px;
-    width: auto;
-    white-space: nowrap;
-    scroll-behavior: smooth;
-  }
 
-  .category-item {
-    flex: 0 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+/* Расположение кнопок прокрутки: слева и справа */
 
-  .category-item:hover{
-    background-color: rgb(20, 90, 210);
-    transition: 0.9s;
-  }
 
-  .scroll-button:hover{
-    background-color: rgb(20, 90, 210);
-    transform: scale(1.2);
-    font-size: 16px;
-    transition: 0.9s;
-  }
+/* Элементы категорий */
+.category-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  gap: 10px;
+  width: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+}
+
+.category-item {
+  flex: 0 0 auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category-item:hover{
+  background-color: rgb(20, 90, 210);
+  transition: 0.5s;
+}
+
+/* Ховер-эффект для кнопки прокрутки */
+.scroll-button:hover {
+  background-color: rgb(20, 90, 210);
+  transform: scale(1.2);
+  font-size: 16px;
+}

@@ -1,0 +1,44 @@
+.profile-container {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto; /* Сохраняем контейнер по центру */
+    width: 500px;
+    height: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-direction: row; /* Элементы по горизонтали */
+    justify-content: flex-start; /* Выравнивание по левому краю */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.profileIcon {
+    margin-right: 20px; /* Отступ справа от аватара */
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* Создает круг */
+    background-color: white;  /* Белый фон */
+    border: 2px solid black;  /* Черная граница */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;  /* Размер текста */
+    color: black;  /* Цвет текста */
+}
+
+.info {
+    flex: 1;
+    text-align: left;  /* Выравнивание текста по левому краю */
+}
+
+.errorMessage {
+    color: red;
+    text-align: center;
+}
+
+.heading {
+    text-align: center;
+}

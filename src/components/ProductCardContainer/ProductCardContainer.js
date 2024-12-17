@@ -33,7 +33,6 @@ function ProductCardContainer() {
             />
             <h3>{product.name}</h3>
             <p className="price">Цена: {product.price}₽</p>
-            <button className='product-container-button'>Добавить в корзину</button>
           </div>
           
         ))

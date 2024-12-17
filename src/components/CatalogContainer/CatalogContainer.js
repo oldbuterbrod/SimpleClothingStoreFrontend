@@ -1,31 +1,40 @@
 import './CatalogContainer.css';
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Импортируем useNavigate
 import fetchData from '../../fetchData';
 
 function CatalogContainer() {
-   const [categories, setCategories] = useState([]);
-   const [images, setImages] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const navigate = useNavigate(); // Инициализация навигации
 
   useEffect(() => {
     async function getCategories() {
-      const data = await fetchData('/product/getAllCategory');
-      const images_url = await fetchData('/product/getPopProducts');
-      if (data && data.categories && data.categories.length > 0) {
-        setCategories(data.categories);
-        setImages(images_url.products.map(product => product.image_url));
-        console.log(images_url.products)
+      try {
+        const categoryData = await fetchData('/product/getAllCategory');
+        if (categoryData && categoryData.categories && categoryData.categories.length > 0) {
+          setCategories(categoryData.categories);
+        }
+      } catch (error) {
+        console.error('Ошибка при загрузке данных:', error);
       }
     }
     getCategories();
   }, []);
 
+  const handleCategoryClick = (categoryName) => {
+    navigate('/productscategory', { state: { categoryName } }); // Передаем категорию через state
+  };
+
   return (
     <div className="product-container">
       {categories.length > 0 ? (
-        categories.map((categorie, index) => (
-          <div key={index} className="card">    
-             <img alt={categorie.name} src={images[index]} /> 
-            <h3>{categorie.name}</h3>
+        categories.map((category, index) => (
+          <div
+            key={index}
+            className="category-block"
+            onClick={() => handleCategoryClick(category.name)} // Добавляем обработчик клика
+          >
+            <h3>{category.name}</h3> {/* Отображаем имя категории в блоке */}
           </div>
         ))
       ) : (

@@ -11,6 +11,8 @@ import Stores from "./pages/Stores";
 import Autorisation from "./pages/Autorisation";
 import Registration from "./pages/Registration";
 import Profile from "./pages/Profile";
+import ProductsCategory from './pages/ProductsCategory'
+import Cart from "./pages/Cart";
 import Logo from "./logo/Logo";
 import "./App.css";
 
@@ -32,6 +34,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />
             <Route path="/stores" element={<Stores />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/productscategory" element={<ProductsCategory />} />
           </Routes>
         </div>
         <InformationContainer />

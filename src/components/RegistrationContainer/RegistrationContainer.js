@@ -82,8 +82,7 @@ function RegistrationContainer() {
             setRegistrationData({ email: '', password: '', username: '' });
             repeatPasswordRef.current.value = '';
             alert('Вы успешно зарегистрировались!');
-            setStorage(true);
-            navigate('/profile');
+            navigate('/autorisation');
         } catch (err) {
             const status = err.message.match(/Ошибка: (\d+)/)?.[1]; // Извлечение статуса из сообщения об ошибке
             console.error('HTTP статус запроса:', status);

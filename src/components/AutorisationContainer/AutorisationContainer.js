@@ -59,13 +59,11 @@ function AutorisationContainer() {
     
         try {
             const dataUser = await fetchData('/customer/login', 'POST', jsonUserRegister);
-            console.log(dataUser);
             setError('');
             setAutorisationData({ email: '', password: '' });
             alert('Вы зашли в аккаунт!');
             setStorage(true);
             setToken(dataUser.token);
-            console.log(dataUser.token);
             navigate('/profile');
         } catch (err) {
             const status = err.message.match(/Ошибка: (\d+)/)?.[1];

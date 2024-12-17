@@ -7,7 +7,6 @@ function ProductContainer({ id }) {
   const [product, setProduct] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [token] = useStorage('token', null, 'sessionStorage'); // Вызов useStorage на верхнем уровне
-  console.log(token)
   useEffect(() => {
     async function getProduct() {
       const data = await fetchData('/product/getProduct', 'POST', { productId: Number(id) });
@@ -28,23 +27,20 @@ function ProductContainer({ id }) {
     }
 
     try {
-      const response = await fetchData(
-        '/product/addToCart', // Предположим, что здесь используется корректный endpoint
-        'POST',
-        { productId: Number(id), size: selectedSize },
-        { Authorization: token}
+      await fetchData(
+          '/cart/addToCart',
+          'POST',
+          { productId: Number(id), size: selectedSize },
+          { Authorization: token }
       );
-
-      if (response.ok) {
-        alert('Товар добавлен в корзину');
-      } else {
-        alert('Ошибка! Товар не добавлен в корзину');
-      }
-    } catch (error) {
+      alert('Товар добавлен в корзину');
+  } catch (error) {
       console.error('Ошибка при добавлении в корзину:', error);
-      alert('Произошла ошибка. Попробуйте снова.');
-    }
-  };
+      alert('Вы не авторизированы! Войдите в личный кабинет!');
+  }
+  
+
+  };  
 
   if (!product) {
     return <div>Загрузка...</div>;
