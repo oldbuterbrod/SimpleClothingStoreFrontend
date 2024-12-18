@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:8081',
+      target: 'http://clothingstore-go-app-1:8080',
       changeOrigin: true,
     })
   );

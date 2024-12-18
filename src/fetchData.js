@@ -2,7 +2,7 @@ async function fetchData(url, method = 'GET', postData = null, additionalHeaders
     try {
         const headers = {
             'Content-Type': 'application/json',
-            ...additionalHeaders, // Добавляем дополнительные заголовки
+            ...additionalHeaders, 
         };
 
         const options = {
@@ -14,7 +14,7 @@ async function fetchData(url, method = 'GET', postData = null, additionalHeaders
             options.body = typeof postData === 'string' ? postData : JSON.stringify(postData);
         }
 
-        const response = await fetch('http://localhost:8081' + url, options);
+        const response = await fetch('/api' + url, options);
 
         if (!response.ok) {
             throw new Error(`Ошибка: ${response.status}`);
